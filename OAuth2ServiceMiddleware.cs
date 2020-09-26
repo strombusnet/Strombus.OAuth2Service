@@ -1543,7 +1543,6 @@ namespace Strombus.OAuth2Service
 
                         if (accountId == null || userId == null)
                         {
-                            /* TODO: return the appropriate error for "missing or invalid username" */
                             await SetHttpResponseBadRequestAsync_OAuth2ErrorResponse(context, ERROR_INVALID_GRANT, "Username is invalid or missing.").ConfigureAwait(false);
                             return;
                         }

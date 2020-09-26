@@ -232,7 +232,6 @@ namespace Strombus.OAuth2Service.OAuth2
                 // clear the dirty flag
                 _tokenId_IsDirty = false;
             }
-            /* TODO: we should really only be updating the expiration time if it has CHANGED */
             if (_expirationTime_IsDirty)
             {
                 if (_expirationTime != null)

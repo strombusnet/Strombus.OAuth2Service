@@ -271,7 +271,6 @@ namespace Strombus.OAuth2Service.OAuth2
             ParsingHelper.ServerDetails? loginServerDetails = ParsingHelper.ExtractServerDetailsFromAccountServerId(loginServerId);
             if (loginServerDetails == null)
             {
-                /* TODO: raise critical exception, or otherwise handle this error.  Should this ever actually happen? */
                 throw new Exception();
             }
             resultClient._loginServerDetails = loginServerDetails.Value;
@@ -361,7 +360,6 @@ namespace Strombus.OAuth2Service.OAuth2
                 {
                     _secret = new string(RandomHelper.CreateRandomCharacterSequence_Readable6bit_ForIdentifiers(32));
                     _secret_IsDirty = true;
-                    /* TODO: consider supporting expirations on clients */
                     _expiresAt = null;
                     _expiresAt_IsDirty = true;
                 }

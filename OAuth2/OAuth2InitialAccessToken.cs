@@ -107,7 +107,6 @@ namespace Strombus.OAuth2Service.OAuth2
                     ParsingHelper.ServerDetails? loginServerDetails = ParsingHelper.ExtractServerDetailsFromAccountServerIdIdentifier(tokenId);
                     if (loginServerDetails == null)
                     {
-                        /* TODO: raise critical exception, or otherwise handle this error.  Should this ever actually happen? */
                         throw new Exception();
                     }
                     resultToken._loginServerDetails = loginServerDetails.Value;
